@@ -1,0 +1,42 @@
+---
+import BlogItem from './blogitem.astro';
+import Laravel from './icons/Laravel.astro';
+import Python from './icons/Python.astro';
+import Php from './icons/Php.astro';
+import Html from './icons/html.astro';
+import CSS from './icons/CSS.astro';
+import JS from './icons/JS.astro';
+import Mysql from './icons/mysql.astro';
+import Vue from './icons/Vue.astro';
+import Vite from './icons/Vite.astro';
+
+const blogPosts = [
+  {
+    title: "Proyecto 1: CodeClimber",
+    description: "CodeClimber es una plataforma en línea que ofrece cursos de programación gratuitos y de pago. Facilita la compra de cursos premium con métodos de pago seguros y variados. La interfaz es intuitiva y ágil, mejorando la experiencia de los estudiantes. Los administradores y profesores tienen acceso a herramientas analíticas para seguir el progreso de los estudiantes y el rendimiento de los cursos, optimizando la enseñanza y mejorando la calidad educativa continuamente.",
+    img: "/images/codeclimber.png", // Ruta de la imagen corregida
+    languages: [Php, Laravel, JS, CSS, Mysql, Vite],
+    githubLink: "https://github.com/Blendingcolor/CodeClimberP"
+  },
+  {
+    title: "Proyecto 2: EduFun",
+    description: "EduFun es una plataforma interactiva diseñada para la enseñanza del idioma inglés a través de juegos. Su objetivo es hacer el aprendizaje divertido y accesible para los niños, utilizando actividades lúdicas que fomentan la participación activa y el interés continuo.",
+    img: "/images/codefun.png", // Ruta de la imagen corregida
+    languages: [Php, Html, CSS, JS, Mysql],
+    githubLink: "https://github.com/PAU45/PROYECTO-DE-EDUFUN"
+  },
+  // Agrega más proyectos según sea necesario
+];
+---
+
+<div class="flex flex-col gap-8 mt-24 max-w-4xl mx-auto">
+  {blogPosts.map(post => (
+    <BlogItem 
+      title={post.title}
+      description={post.description}
+      img={post.img}
+      languages={post.languages}
+      githubLink={post.githubLink}
+    />
+  ))}
+</div>

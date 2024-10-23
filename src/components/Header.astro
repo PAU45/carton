@@ -1,0 +1,56 @@
+---
+const currentPage = Astro.props.currentPage || 'other';
+---
+
+<header class="bg-black text-white p-4 fixed w-full top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-lg font-bold">Mi Portafolio v1.0</div>
+    <button id="menu-btn" class="md:hidden">
+      <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <nav class="hidden md:flex space-x-4">
+ 
+      <a href="/aboutme" class="hover:underline">Sobre mí</a>
+      <a href="/#experiencia" class="hover:underline">Experiencia</a>
+      <a href="/#proyectos" class="hover:underline">Proyectos</a>
+      {currentPage !== 'index' && (
+        <a href="/" class="hover:underline">Inicio</a>
+      )}
+    </nav>
+  </div>
+  <div id="menu" class="absolute top-full left-0 w-full hidden md:hidden flex flex-col items-center py-5 bg-black text-white z-50">
+ 
+    <a href="/aboutme" class="block py-2 hover:underline">Sobre mí</a>
+    <a href="/#experiencia" class="block py-2 hover:underline">Experiencia</a>
+    <a href="/#proyectos" class="block py-2 hover:underline">Proyectos</a>
+    {currentPage !== 'index' && (
+      <a href="/" class="block py-2 hover:underline">Inicio</a>
+    )}
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuBtn.addEventListener('click', () => {
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+      if (menuIcon) {
+        menuIcon.classList.toggle('hidden');
+      }
+      if (closeIcon) {
+        closeIcon.classList.toggle('hidden');
+      }
+    });
+  });
+</script>

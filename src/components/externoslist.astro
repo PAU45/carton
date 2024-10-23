@@ -1,0 +1,89 @@
+---
+import ExternosItem from './externosItem.astro';
+
+import Python from "../components/icons/Python.astro";
+import React from "../components/icons/React.astro";
+import Django from "../components/icons/Django.astro";
+import Sqlite from "../components/icons/sqlite.astro";
+import HTML from "./icons/html.astro";
+import CSS from "./icons/CSS.astro";
+import Tailwinds from "./icons/Tailwinds.astro";
+import JS from "./icons/JS.astro";
+
+const projects = [
+  {
+    title: "Sistema de Gestion de Estudiantes",
+    description: "Este proyecto es un sistema completo para gestionar estudiantes, desarrollado utilizando Python y SQLite. Permite a los usuarios registrar, actualizar y eliminar información de estudiantes. Además, incluye funcionalidades para la gestión de cursos y calificaciones.",
+    videos: [
+      { src: "https://www.youtube.com/embed/9wyZwnOc7yM", alt: "Sistema de Gestion de Estudiantes", type: "youtube" },
+    ],
+    languages: [Python, Sqlite],
+    projectLink: "https://github.com/PAU45/sistema-de-notas.git",
+    anchor: "proyecto1"
+  },
+  {
+    title: "Encriptador de Textos",
+    description: "Esta aplicación web permite encriptar y desencriptar textos utilizando HTML, CSS y JavaScript. Es ideal para proteger información sensible y aprender sobre técnicas básicas de encriptación. La interfaz es intuitiva y fácil de usar.",
+    videos: [
+      { src: "https://www.youtube.com/embed/c1kJ2cOuz1o", alt: "Encriptacion de Letras", type: "youtube" }
+    ],
+    languages: [HTML, CSS, JS],
+    projectLink: "https://github.com/PAU45/encriptacion-de-letras.git",
+    anchor: "proyecto2"
+  },
+  {
+    title: "Calculadora de Python",
+    description: "Una calculadora desarrollada en Python que permite realizar operaciones matemáticas básicas. Este proyecto es una excelente manera de aprender sobre la lógica de programación y el manejo de funciones en Python.",
+    videos: [
+      { src: "https://www.youtube.com/embed/IvyVVCykx-Y", alt: "Calculadora de Python", type: "youtube" }
+    ],
+    languages: [Python],
+    projectLink: "https://github.com/PAU45/calculadora-python.git",
+    anchor: "proyecto3"
+  },
+  {
+    title: "Creador de Facturas",
+    description: "Aplicación para crear y gestionar facturas, desarrollada utilizando Django, HTML, CSS y SQLite. Permite a los usuarios generar facturas detalladas, gestionar clientes y productos, y mantener un registro de todas las transacciones.",
+    videos: [
+      { src: "https://www.youtube.com/embed/UGIRHIcTocY", alt: "Creador de Facturas", type: "youtube" }
+    ],
+    languages: [Django, HTML, CSS, Sqlite],
+    projectLink: "https://github.com/PAU45/lab06.git",
+    anchor: "proyecto4"
+  },
+  {
+    title: "Sistema de Gestion de Eventos",
+    description: "Este sistema permite gestionar eventos, incluyendo la creación, actualización y eliminación de eventos. Desarrollado con Django, HTML, CSS y SQLite, facilita la organización y seguimiento de eventos, así como la gestión de asistentes.",
+    videos: [
+      { src: "https://www.youtube.com/embed/wQImHuWyhmk", alt: "Sistema de Gestion de Eventos", type: "youtube" }
+    ],
+    languages: [Django, HTML, CSS, Sqlite],
+    projectLink: "https://github.com/PAU45/lab07django.git",
+    anchor: "proyecto5"
+  },
+  {
+    title: "Front de Proyecto Integrador",
+    description: "Este proyecto es el frontend de un proyecto integrador, desarrollado utilizando React, HTML y Tailwind CSS. La interfaz es moderna y responsiva, proporcionando una excelente experiencia de usuario. Incluye componentes reutilizables y un diseño limpio.",
+    videos: [
+      { src: "https://www.youtube.com/embed/v9IfUrLcX-Q", alt: "Front de Proyecto Integrador", type: "youtube" }
+    ],
+    languages: [React, HTML, Tailwinds],
+    projectLink: "https://github.com/PAU45/inicio-front-caserito.git",
+    anchor: "proyecto6"
+  },
+];
+---
+
+<div class="flex flex-col items-center gap-6">
+  {projects.map(project => (
+    <div id={project.anchor} class="w-full max-w-2xl">
+      <ExternosItem 
+        title={project.title}
+        description={project.description}
+        videos={project.videos}
+        languages={project.languages}
+        projectLink={project.projectLink}
+      />
+    </div>
+  ))}
+</div>

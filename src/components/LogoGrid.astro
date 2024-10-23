@@ -1,0 +1,122 @@
+---
+import GitHub from "../components/icons/GitHub.astro";
+import Python from "../components/icons/Python.astro";
+import React from "../components/icons/React.astro";
+import Vue from "../components/icons/Vue.astro";
+import Django from "../components/icons/Django.astro";
+import Node from "../components/icons/Node.astro";
+import Logo from "../components/icons/logo.astro";
+import Mysql from "../components/icons/mysql.astro";
+import Sqlite from "../components/icons/sqlite.astro";
+import Mongodb from "../components/icons/mongodb.astro";
+import HTML from "./icons/html.astro";
+import CSS from "./icons/CSS.astro";
+import Tailwinds from "./icons/Tailwinds.astro";
+import Springboot from "./icons/Springboot.astro";
+import Laravel from "./icons/Laravel.astro";
+import JS from "./icons/JS.astro";
+import Php from '../components/icons/Php.astro';
+import Vite from "./icons/Vite.astro";
+---
+
+<section class="py-12">
+  <div class="container mx-auto px-4">
+    <h2 class="text-center text-white text-4xl font-bold mb-8">Mis Herramientas</h2>
+    <div class="slider">
+      <div class="slide-track">
+
+        <!-- Iconos -->
+        <div class="slide"><Springboot class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><JS class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Laravel class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><CSS class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Tailwinds class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><HTML class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><GitHub class="h-15 w-20 mx-4" /></div>
+        
+        <div class="slide"><React class="h-20 w-20 mx-4" /></div>
+        <div class="slide"><Vue class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Django class="h-20 w-20" /></div>
+        <div class="slide"><Node class="h-20 w-20" /></div>
+        <div class="slide"><Logo class="h-20 w-20 mx-4" /></div>
+        <div class="slide"><Mysql class="h-20 w-20" /></div>
+        <div class="slide"><Php class="h-20 w-20" /></div>
+        <div class="slide"><Sqlite class="h-20 w-20" /></div>
+        <div class="slide"><Mongodb class="h-20 w-20" /></div>
+        <div class="slide"><Vite class="h-20 w-20" /></div>
+
+        <!-- Repetimos los iconos para el efecto de carrusel continuo -->
+        <div class="slide"><JS class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Springboot class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Laravel class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Tailwinds class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><CSS class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><HTML class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><GitHub class="h-15 w-20 mx-4" /></div>
+     
+        <div class="slide"><React class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Vue class="h-15 w-20 mx-4" /></div>
+        <div class="slide"><Django class="h-20 w-20" /></div>
+        <div class="slide"><Node class="h-20 w-20" /></div>
+        <div class="slide"><Logo class="h-16 w-20 mx-4" /></div>
+        <div class="slide"><Mysql class="h-20 w-20" /></div>
+        <div class="slide"><Php class="h-20 w-20" /></div>
+        <div class="slide"><Sqlite class="h-20 w-20" /></div>
+        <div class="slide"><Mongodb class="h-20 w-20" /></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 12)); } /* Ajustado a 12 para incluir todas las diapositivas */
+  }
+
+  .slider {
+    background: transparent;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .slider::before,
+  .slider::after {
+    background: transparent;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: calc(250px * 17); /* Ajustar según el número total de diapositivas (original + repetidas) */
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px; /* Ajusta según sea necesario */
+  }
+</style>

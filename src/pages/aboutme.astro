@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<style>
+    @import "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap";
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        min-height: 100vh;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .grid-item {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgb(0, 0, 0);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .grid-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+        margin-top: 5rem;
+        grid-column: span 12;
+        background-color: rgba(54, 162, 235, 0.9);
+        color: white;
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+
+    .navbar, .sidebar, .main, .footer {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .certification-list {
+    margin-left: 20px; /* Espacio a la izquierda */
+    
+    justify-content: flex-end; 
+    display: flex;
+
+}
+    .navbar {
+        grid-column: span 8;
+        background-color: rgba(255, 99, 132, 0.8);
+        color: white;
+    }
+
+    .sidebar {
+        grid-column: span 4;
+        background: linear-gradient(to bottom, #0000ff, #000000);
+        color: white;
+        grid-row:span 2;
+    }
+
+    .main {
+        grid-column: span 8;
+        background: linear-gradient(to bottom, #0000ff, #87cefa);
+    }
+
+    .footer {
+        grid-column: span 12;
+        background-color: rgba(255, 159, 64, 0.8);
+        color: white;
+    }
+
+    h2.title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 2.5rem; /* Ajusta este valor según sea necesario */
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    li {
+        margin: 5px 0;
+        padding-left: 10px; /* Espacio a la izquierda para el símbolo ➤ */
+        position: relative;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .hobbies-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px; /* Espacio entre el texto y la imagen */
+        padding: 10px; /* Espacio interno */
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Una sola columna */
+        }
+
+        .grid-item {
+            grid-column: span 1; /* Cada ítem ocupa toda la fila */
+        }
+
+        .hobbies-container {
+            flex-direction: column; /* Apilar en pantallas pequeñas */
+            align-items: flex-start; /* Alinear a la izquierda */
+        }
+
+        ul {
+            align-items: flex-start; /* Alinear a la izquierda */
+        }
+    }
+</style>
+
+<Layout title="Portafolio de Paulo Melendez - Desarrollador y Programador web" 
+       description="Si buscas un desarrollador web que pueda crear páginas de excelente calidad, paulito_god es tu mejor opción. Con experiencia en diseño y desarrollo web, paulito_god garantiza resultados profesionales y personalizados para tu negocio o proyecto personal." 
+       currentPage="index">
+    <div class="grid-container">
+        <div class="grid-item header">
+            <h2 class="title">Un poco de mí</h2>
+            <p>Soy Paulo Melendez, conocido como <strong>paulito_god</strong>. Me apasiona el desarrollo web y estoy siempre en busca de nuevos proyectos. Me gusta la música variada y disfruto de películas como <strong>Spiderman 3</strong>. Me encanta el origami, jugar baloncesto y explorar nuevos lugares con mi familia. También tengo experiencia como streamer en Twitch, donde comparto mi amor por los videojuegos. Me considero una persona justa, sociable, empática, honesta y responsable.</p>
+        </div>
+        <div class="grid-item navbar">
+            <h2 class="title">Habilidades Blandas</h2>
+            <ul>
+                <li>➤ Comunicación efectiva</li>
+                <li>➤ Trabajo en equipo</li>
+                <li>➤ Resolución de problemas</li>
+                <li>➤ Adaptabilidad</li>
+                <li>➤ Gestión del tiempo</li>
+            </ul>
+            <div class="img-container">
+                <img src="/public/images/habiliades.png" alt="Habilidades" width="300">
+            </div>
+        </div>
+        <div class="grid-item sidebar">
+            <h2 class="title">Otros Datos</h2>
+            <p class="title"><strong>Idiomas:</strong></p>
+            <ul class="language-list">
+                <li>Español (nativo)</li>
+                <li>Inglés (básico)</li>
+            </ul>
+            <p><strong>Certificaciones:</strong></p>
+    <ul class="certification-list">
+        <li>Nivel intermedio en Python – TECSUP (Actualmente estudiando)</li>
+        <li>Nivel Básico de Inglés – Conversa (Actualmente estudiando)</li>
+        <li>Certificación en Gestión de Proyectos – Coursera (2024)</li>
+        <li>IT Essentials: PC Hardware and Software – Cisco Networking Academy (2023)</li>
+        <li>Scrum Fundamental Certified – SCRUM study (2024)</li>
+    </ul>
+    <div class="img-container">
+        <img src="/public/images/certificado1.png" alt="Certificaciones" width="300">
+    </div>
+        </div>
+        <div class="grid-item main">
+            <h2 class="title">Mi Historia</h2>
+            <p>Comencé mi carrera en el desarrollo web por curiosidad, atraído por la dinámica del entorno laboral. Mi aventura comenzó en Tecsup, donde escribí mi primer "Hello World" en HTML, y desde entonces no he mirado atrás.</p>
+            <div class="img-container">
+                <img src="/public/images/historia.png" alt="Historia" width="300">
+            </div>
+        </div>
+        <div class="grid-item footer">
+            <h2 class="title">Pasatiempos</h2>
+            <div class="hobbies-container">
+                <ul>
+                    <li>➤ Programación de proyectos personales</li>
+                    <li>➤ Videojuegos</li>
+                    <li>➤ Lectura de novelas de ciencia ficción</li>
+                    <li>➤ Caminar</li>
+                    <li>➤ Ver películas</li>
+                    <li>➤ Escuchar música</li>
+                </ul>
+                <div class="img-container">
+                    <img src="/public/images/pasatiempos.png" alt="Pasatiempos" width="300">
+                </div>
+            </div>
+        </div>
+    </div>
+    <Footer />
+</Layout>

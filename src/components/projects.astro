@@ -1,0 +1,55 @@
+---
+import ProjectItem from "../components/projectsItems.astro";
+
+const PROJECTS = [
+  {
+    title: "Proyecto 1",
+    description: "Sistema de Gestion de Notas",
+    image: "public/images/vsg/sistema de gestion de estudiantes(svg)/inicio.PNG",
+    link: "/proyects_externos",
+    anchor: "proyecto1"
+  },
+  {
+    title: "Proyecto 2",
+    description: "Encriptacion de letras",
+    image: "public/images/vsg/encriptacion de letras/inicio.PNG",
+    link: "/proyects_externos",
+    anchor: "proyecto2"
+  },
+  {
+    title: "Proyecto 3",
+    description: "Calculadora de python.",
+    image: "public/images/vsg/calculadora-python/inicio blanco.PNG",
+    link: "/proyects_externos",
+    anchor: "proyecto3"
+  },
+ 
+  {
+    title: "Proyecto 4",
+    description: "Crear Factura de una Tienda",
+    image: "public/images/vsg/creador de facturas (svg)/factura.PNG",
+    link: "/proyects_externos",
+    anchor: "proyecto4"
+  },
+  {
+    title: "Proyecto 5",
+    description: "Sistema de Gestion de eventos",
+    image: "public/images/vsg/sistema de gestion de eventos(svg(/otros usuarios.PNG",
+    link: "/proyects_externos",
+    anchor: "proyecto5"
+  },
+  {
+    title: "Proyecto 6",
+    description: "front de proyecto integrador",
+    image: "public/images/vsg/inicio front/inicio.PNG",
+    link: "/proyects_externos",
+    anchor: "proyecto6"
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 my-20">
+  {PROJECTS.map((project) => (
+    <ProjectItem {...project} />
+  ))}
+</div>

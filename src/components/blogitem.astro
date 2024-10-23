@@ -1,0 +1,25 @@
+---
+const { title, description, img, languages, githubLink } = Astro.props;
+---
+
+<div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-6 mb-6 max-w-4xl w-full mx-auto transition-transform transform hover:scale-105">
+  <h2 class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300 hover:text-blue-500">{title}</h2>
+  <img class="rounded-lg mb-4 w-full" src={img} alt={title} />
+  <p class="mb-4 font-normal text-gray-700 dark:text-gray-400 transition-colors duration-300 hover:text-blue-500">{description}</p>
+  <div class="mb-4">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Lenguajes Utilizados:</h3>
+    <div class="flex space-x-2">
+      {languages.map(LanguageIcon => (
+        <div class="transition-transform duration-300 hover:scale-125">
+          <LanguageIcon class="w-8 h-8 text-gray-700 dark:text-gray-400" />
+        </div>
+      ))}
+    </div>
+  </div>
+  <a href={githubLink} class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-transform duration-300 transform hover:scale-105">
+    Ver en GitHub
+    <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+    </svg>
+  </a>
+</div>
