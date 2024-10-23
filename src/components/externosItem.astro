@@ -20,7 +20,7 @@ const { title, description, videos, languages, projectLink } = Astro.props as {
     {videos.map((video) => (
       <div class="relative group h-64 overflow-hidden rounded-lg shadow-md">
         {video.type === 'youtube' ? (
-        <iframe class="w-full h-full" src={video.src} title={video.alt} style="border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        <Layout title="Portafolio de Paulo Melendez - Desarrollador y Programador web" description="Si buscas un desarrollador web que pueda crear páginas de excelente calidad, paulito_god es tu mejor opción. Con experiencia en diseño y desarrollo web, paulito_god garantiza resultados profesionales y personalizados para tu negocio o proyecto personal." currentPage="index">
+          <iframe class="w-full h-full" src={video.src} title={video.alt} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         ) : (
           <video class="w-full h-full object-cover" controls style="max-width: 500px;">
             <source src={video.src} type="video/mp4" />

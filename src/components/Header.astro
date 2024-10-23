@@ -41,9 +41,8 @@ const currentPage = Astro.props.currentPage || 'other';
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
 
-  const menuBtn = document.getElementById('menuBtn');
   if (menuBtn) {
-      menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', () => {
       if (menu) {
         menu.classList.toggle('hidden');
       }
@@ -54,5 +53,6 @@ const currentPage = Astro.props.currentPage || 'other';
         closeIcon.classList.toggle('hidden');
       }
     });
-  });
+  }
+});
 </script>
