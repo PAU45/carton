@@ -9,7 +9,7 @@ const { title, description, img, languages, githubLink } = Astro.props;
   <div class="mb-4">
     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Lenguajes Utilizados:</h3>
     <div class="flex space-x-2">
-      {languages.map(LanguageIcon => (
+      {languages.map((LanguageIcon: any) => (
         <div class="transition-transform duration-300 hover:scale-125">
           <LanguageIcon class="w-8 h-8 text-gray-700 dark:text-gray-400" />
         </div>

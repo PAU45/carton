@@ -4,9 +4,10 @@ import Header from '../components/Header.astro';
 interface Props {
   title: string;
   description: string;
+  currentPage?: string;
 }
 
-const { description, title } = Astro.props;
+const { description, title, currentPage } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
