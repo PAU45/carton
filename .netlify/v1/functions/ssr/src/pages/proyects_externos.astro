@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import ExternosList from '../components/externoslist.astro';
+---
+
+<Layout title="Proyectos Externos" description="Lista de proyectos externos realizados" currentPage="proyectos_externos">
+  <main class="px-2 mt-24">
+    <section class="py-12">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-gray-900 dark:text-white leading-tight transition-transform transform hover:scale-105 hover:text-blue-500 duration-300 ease-in-out animate-pulse">
+        Proyectos Externos
+      </h2>
+      <ExternosList />
+    </section>
+    <Footer />
+  </main>
+</Layout>
