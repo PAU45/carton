@@ -20,7 +20,7 @@ const { title, description, videos, languages, projectLink } = Astro.props as {
     {videos.map((video) => (
       <div class="relative group h-64 overflow-hidden rounded-lg shadow-md">
         {video.type === 'youtube' ? (
-          <iframe class="w-full h-full" src={video.src} title={video.alt} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="w-full h-full" src={video.src} title={video.alt} style="border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         ) : (
           <video class="w-full h-full object-cover" controls style="max-width: 500px;">
             <source src={video.src} type="video/mp4" />

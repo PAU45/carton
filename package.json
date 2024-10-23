@@ -14,7 +14,7 @@
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource-variable/onest": "^5.1.0",
-    "astro": "^4.16.1",
+    "astro": "^4.16.7",
     "flowbite": "^2.5.2",
     "prop-types": "^15.8.1",
     "react-type-animation": "^3.2.0",
