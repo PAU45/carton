@@ -1,13 +1,14 @@
----import "@fontsource-variable/onest"
+---
+import "@fontsource-variable/onest";
 import Header from '../components/Header.astro';
 
 interface Props {
   title: string;
   description: string;
-
+  currentPage?: string; 
 }
 
-const { description, title } = Astro.props;
+const { description, title, currentPage } = Astro.props as Props;
 ---
 <!doctype html>
 <html lang="es">
@@ -21,7 +22,7 @@ const { description, title } = Astro.props;
 </head>
 <body>
   <div class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-  <Header/>
+  <Header currentPage={currentPage} />
   <slot />
 </body>
 </html>
