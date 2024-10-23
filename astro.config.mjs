@@ -10,4 +10,6 @@ export default defineConfig({
   output: 'server', // o 'hybrid'
   adapter: netlify(),
   integrations: [react(), tailwind()],
+  site: 'https://portafolio-paulo-melendez.com', // Reemplaza con la URL de tu sitio
+  outDir: './dist',
 });
